@@ -1,3 +1,61 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "next",
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/no-unresolved": "off",
+    "react/no-unstable-nested-components": "off", //? idk how to fix
+    "no-console": "off",
+    "func-names": "off",
+    "no-unused-vars": "warn",
+    "comma-dangle": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
+    "consistent-return": "off",
+    "no-param-reassign": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "react/button-has-type": "off",
+    "eqeqeq": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "react/no-array-index-key": "off",
+    "no-restricted-globals": "off",
+    "no-loss-of-precision": "off",
+    "no-unused-expressions": "off",
+    "radix": "off",
+    "no-shadow": "off",
+    "no-underscore-dangle": "off",
+    "new-cap": "off",
+    "camelcase": "off",
+    "spaced-comment": "off"
+  }
 }
