@@ -1,0 +1,30 @@
+.topbar-vertical {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  &__container {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    height: 55px;
+    margin-left: 230px;
+    transition: margin-left 0.5s ease;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      z-index: 1;
+      margin-left: 0;
+    }
+  }
+
+  &__collapsed {
+    margin-left: 0;
+    width: 100%;
+  }
+}

@@ -7,10 +7,10 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <div>
-      <Topbar />
+    <div className="min-h-screen text-sm">
       <Sidebar />
-      {children}xzcasd
+      <Topbar />
+      {children}
     </div>
   );
 }
