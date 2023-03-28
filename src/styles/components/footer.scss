@@ -1,0 +1,11 @@
+.footer {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}

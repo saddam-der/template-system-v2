@@ -1,3 +1,9 @@
+import Content from '@components/content';
+
 export default function Settings() {
-  return <div className="">ini settings</div>;
+  return (
+    <div className="">
+      <Content>ini settings</Content>
+    </div>
+  );
 }

@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './components/core.scss';
+@import './components/content.scss';
+@import './components/footer.scss';
 @import './components/sidebar.scss';
 @import './components/topbar.scss';
 

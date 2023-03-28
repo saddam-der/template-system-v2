@@ -1,0 +1,10 @@
+.content {
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  height: 100%;
+
+  &__container {
+    min-height: 100vh;
+  }
+}
