@@ -11,14 +11,14 @@ export const navigationConfig: data[] = [
     url: '/dashboard',
     subMenu: [
       {
-        title: 'Dashboard',
+        title: 'CRM',
         icon: 'Fibox',
-        url: '/dashboard',
+        url: '/dashboard/crm',
         subMenu: [
           {
-            title: 'Dashboard 2',
+            title: 'Customer',
             icon: 'Fibox',
-            url: '/dashboard/test',
+            url: '/dashboard/crm/customer',
           },
         ],
       },
