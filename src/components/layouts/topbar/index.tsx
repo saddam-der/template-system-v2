@@ -13,7 +13,12 @@ export default function Topbar() {
 
   return (
     <div className="topbar-vertical">
-      <div className="topbar-vertical__container shadow">
+      <div
+        className={classNames(
+          'topbar-vertical__container shadow',
+          sidebarVisible ? '' : 'topbar-vertical__collapsed'
+        )}
+      >
         <div
           className="hover:bg-[#e5e5e5] p-2 cursor-pointer hover:rounded-full"
           onClick={() => dispatch(setSidebarActive(!sidebarVisible))}

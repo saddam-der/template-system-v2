@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
+    "@tanem/react-nprogress": "^5.0.33",
     "@tanstack/react-query": "^4.28.0",
     "@types/node": "18.15.5",
     "@types/react": "18.0.28",
@@ -19,6 +20,7 @@
     "classnames": "^2.3.2",
     "eslint": "^8.36.0",
     "eslint-config-next": "13.2.4",
+    "framer-motion": "^10.11.2",
     "next": "13.2.4",
     "next-redux-wrapper": "^8.1.0",
     "node-sass": "^8.0.0",

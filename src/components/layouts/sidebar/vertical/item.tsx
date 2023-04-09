@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { navigationConfig } from '@configs/navigationConfig';
 import Link from 'next/link';
 import classNames from 'classnames';
+import { HiOutlineChevronRight } from 'react-icons/hi';
 
 interface SubMenuItem {
   title: string;
@@ -39,7 +40,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ item, depth = 0 }) => {
         <Link
           href="#"
           className={classNames(
-            'flex py-2 items-center rounded-md text-gray-200 hover:bg-gray-800',
+            'flex justify-between py-2 mt-1 items-center rounded-md text-gray-200 hover:bg-[#8D99AE]',
             isActive && 'bg-red-800',
             depth === 0 ? 'pl-4' : '',
             depth === 1 ? 'pl-8' : '',
@@ -48,36 +49,39 @@ const MenuItem: React.FC<MenuItemProps> = ({ item, depth = 0 }) => {
           )}
           onClick={toggleSubMenu}
         >
-          {item.icon && (
+          {/* {item.icon && (
             <span className="">
               <i className={`bi bi-${item.icon}`}></i>
             </span>
-          )}
+          )} */}
           <span>{item.title}</span>
-          {depth}
-          <span className="ml-auto">
-            <i className={`bi bi-chevron-${open ? 'up' : 'down'}`}></i>
-          </span>
+
+          <div className="pr-2">
+            {/* <i className={`bi bi-chevron-${open ? 'up' : 'down'}`}></i> */}
+            <HiOutlineChevronRight
+              className={classNames(open ? 'transform rotate-90' : '')}
+            />
+          </div>
         </Link>
       ) : (
-        <Link href={item.url}>
-          <span
-            className={classNames(
-              'flex items-center py-2 rounded-md text-gray-200 hover:bg-gray-800',
-              isActive && 'bg-red-800',
-              depth === 0 ? 'pl-4' : '',
-              depth === 1 ? 'pl-8' : '',
-              depth === 2 ? 'pl-12' : '',
-              depth === 3 ? 'pl-16' : ''
-            )}
-          >
+        <Link
+          href={item.url}
+          className={classNames(
+            'flex items-center mt-1 py-2 rounded-md text-gray-200 hover:bg-[#8D99AE]',
+            isActive && 'bg-red-800',
+            depth === 0 ? 'pl-4' : '',
+            depth === 1 ? 'pl-8' : '',
+            depth === 2 ? 'pl-12' : '',
+            depth === 3 ? 'pl-16' : ''
+          )}
+        >
+          <span>
             {item.icon && (
               <span className="">
                 <i className={`bi bi-${item.icon}`}></i>
               </span>
             )}
             <span>{item.title}</span>
-            {depth}
           </span>
         </Link>
       )}
