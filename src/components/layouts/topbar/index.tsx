@@ -1,9 +1,10 @@
 import classNames from 'classnames';
-import Image from 'next/image';
 import { FaBars } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState, AppDispatch } from '@store/store';
 import { setSidebarActive } from '@store/slices/appSlice';
+
+import Profile from './profile';
 
 export default function Topbar() {
   const dispatch = useDispatch<AppDispatch>();
@@ -28,14 +29,7 @@ export default function Topbar() {
           </div>
         </div>
         <div className="flex flex-row-reverse items-center h-full">
-          <div className="relative h-10 w-10">
-            <Image
-              src="https://via.placeholder.com/150x150"
-              className="rounded-full h-full cursor-pointer"
-              alt="profile"
-              fill
-            />
-          </div>
+          <Profile />
           <div
             className={classNames(
               'mr-1 cursor-default flex flex-col'
